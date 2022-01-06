@@ -18,7 +18,7 @@ contract Item {
     }
 
     receive() external payable {
-        require(msg.value == priceInWei, "We don't support partial payments");
+        //require(msg.value == priceInWei, "We don't support partial payments");
         require(paidWei == 0, "Item is already paid!");
         paidWei += msg.value;
 
